@@ -29,6 +29,12 @@ import ByLaws3 from  './assets/resources/BL/BL3.vue'
 import ByLaws4 from  './assets/resources/BL/BL4.vue'
 import ByLaws5 from  './assets/resources/BL/BL5.vue'
 import ByLaws6 from  './assets/resources/BL/BL6.vue'
+import Winter from './assets/photos/winter.vue'
+import Summer from './assets/photos/summer.vue'
+import Nature from './assets/photos/nature.vue'
+import People from './assets/photos/people.vue'
+
+
 
 export const routes = [
   {path: '/', component: Home},
@@ -62,4 +68,8 @@ export const routes = [
   {path: '/Home/Resources/ByLaws/ByLaws4', component: ByLaws4},
   {path: '/Home/Resources/ByLaws/ByLaws5', component: ByLaws5},
   {path: '/Home/Resources/ByLaws/ByLaws6', component: ByLaws6},
+  {path: '/Home/Gallery/winter', component: Winter},
+  {path: '/Home/Gallery/summer', component: Summer},
+  {path: '/Home/Gallery/nature', component: Nature},
+  {path: '/Home/Gallery/people', component: People},
 ]
