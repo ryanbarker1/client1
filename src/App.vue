@@ -2,8 +2,13 @@
   <div>
     <!--ToDo: Load app-header-->
     <app-Header></app-Header>
+    <div class="tile">
     <router-view></router-view>
+
+    <div class="foot-text">
     <app-footer></app-footer>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -19,3 +24,13 @@
     }
   }
   </script>
+
+<style>
+  .tile{
+    background-color: #fff;
+    /*background-color: white;*/
+    width: 100%;
+
+  }
+
+</style>
