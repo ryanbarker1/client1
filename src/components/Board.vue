@@ -1,16 +1,19 @@
 <template>
   <div>
-    <div class="container mt-4 mb-5">
-      <h2 class="display-4 text-center">SunRidge Board Of Trustees</h2>
-      <hr class="bg-dark mb-4 w-25">
-      <div class="col">
+    <div class="container text-center mt-4 mb-5">
+      <span class="date text-center"><h4 class="dates">Today's Date: {{moment(date).format('MM/DD/YYYY')}}</h4></span>
+      <h2 class="display-4">SunRidge Board Of Trustees</h2>
+      <img src="../assets/photos/arrow17.png" width="600" alt="">
+    </div>
 
+      <div class="container col">
+      <div class="row">
 
         <div class="president text-center col-xl-12 col-lg-12 col-md-12">
 
         <div class="card">
           <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-          <span>
+
                     <div class="card-block p-3">
                     <div class="middle">
                        <div class="content">President: Steven Matthews
@@ -21,7 +24,7 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
         </div>
       </div>
 
@@ -29,7 +32,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
+
                     <div class="card-block p-3">
                     <div class="middle">
                     <div class="middle">
@@ -42,7 +45,7 @@
                       </div>
                     </div>
                     </div>
-                    </span>
+
           </div>
         </div>
 
@@ -51,7 +54,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
+
                     <div class="card-block p-3">
                     <div class="middle">
                       <div class="content">Security: Bruce Johnson
@@ -61,7 +64,7 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
           </div>
         </div>
 
@@ -72,7 +75,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
+
                     <div class="card-block p-3">
                     <div class="middle">
                        <div class="content">Treasurer: Stephanie Taylor
@@ -83,7 +86,7 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
           </div>
         </div>
 
@@ -92,7 +95,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
+
                     <div class="card-block p-3">
                     <div class="middle">
                        <div class="content">Fire Protection: Steve Mills
@@ -103,7 +106,7 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
           </div>
         </div>
 
@@ -113,8 +116,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
-                    <div class="card-block p-3">
+            <div class="card-block p-3">
                     <div class="middle">
                        <div class="content">Road Maintenance: Dick Sowers
                        <p>Cabin: H2 <br>
@@ -124,7 +126,7 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
           </div>
         </div>
 
@@ -132,7 +134,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
+
                     <div class="card-block p-3">
                    <div class="middle">
                        <div class="content">Picnic/Sunridge Shirt Sales: Alyn Lunceford
@@ -143,7 +145,7 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
           </div>
         </div>
 
@@ -151,7 +153,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
+
                     <div class="card-block p-3">
                     <div class="middle">
                        <div class="content">Picnic/Sunridge Shirt Sales: Brent Frost
@@ -162,7 +164,7 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
           </div>
         </div>
 
@@ -170,7 +172,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
+
                     <div class="card-block p-3">
                     <div class="middle">
                        <div class="content">Water System Consultant: Alan Dalpias
@@ -181,7 +183,7 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
           </div>
         </div>
 
@@ -189,7 +191,7 @@
 
           <div class="card">
             <img src="https://dummyimage.com/150x150/c7c7c7/000.png" class="img-circle" alt="Card image cap">
-            <span>
+
                     <div class="card-block p-3">
                     <div class="middle">
                        <div class="content">Security/ATV/Covenants/Compliance: Roger Colvin
@@ -200,16 +202,18 @@
                        </div>
                       </div>
                     </div>
-                    </span>
+
           </div>
         </div>
         <!-- Card -->
 
       </div>
+      </div>
     </div>
-  </div>
 </template>
 
 <style>
-
+.col{
+  padding-top: 100px;
+}
 </style>
