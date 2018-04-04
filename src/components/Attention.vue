@@ -1,16 +1,18 @@
 <template>
   <div>
   <div class="container text-center">
+
+    <span class="date text-center"><h4 class="dates">Today's Date: {{moment(date).format('MM/DD/YYYY')}}</h4></span>
     <h2 id="top">Attention Sunridge Property Owners!</h2>
-    <hr class="bg-dark mb-4 w-25">
+    <img src="../assets/photos/arrow17.png" width="600" alt="">
   </div>
     <nav class="navbar">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#section1">Section 1</a></li>
-          <li class="active"><a href="#section2">Section 2</a></li>
-          <li class="active"><a href="#section3">Section 3</a></li>
-          <li class="active"><a href="#section4">Section 4</a></li>
+          <li class="active"><a href="#section1">Amerigas</a></li>
+          <li class="active"><a href="#section2">Toxic Weed</a></li>
+          <li class="active"><a href="#section3">2016 - Firewood</a></li>
+          <li class="active"><a href="#section4">2016 - Hunting</a></li>
         </ul>
       </div>
     </nav>
@@ -20,7 +22,7 @@
         <div class="card ">
           <div class="card-block p-3">
             <h3 class="card-title" id="section1"> Letters from Amerigas:</h3>
-              <div class="card-text scroll">
+              <div class="card-text">
                 <p>Sunridge Board Members;</p>
                 <p>Regarding the Sunridge accounts that are still with us, and will be getting service through us, I am pleased to announce that we will be able to put everyone on a Community pricing.
                 We will be starting the community pricing in 2018 since we are only making one more delivery this year. We will be able to keep the community price around $2.00 a gallon, and everyone would be charged the same,
@@ -174,4 +176,8 @@
   li{
     list-style-type: none;
   }
+
+
+
 </style>
+
