@@ -8,33 +8,60 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <router-link to="/" class="navbar-brand text-black">S.P.O.A</router-link>
+          <router-link to="/" class="navbar-brand text-black"><img src="../assets/photos/cabin2.png" width="30px" alt=""></router-link>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <router-link  to="/Gallery" active-class="active" tag="li"><a>Gallery</a></router-link>
-            <router-link  to="/Member" active-class="active" tag="li"><a>Board</a></router-link>
-            <router-link to="/Attention" active-class="active" tag="li"><a>Attention</a></router-link>
-            <router-link to="/Map" active-class="active" tag="li"><a>Maps</a></router-link>
+          <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
+            <router-link  to="/Gallery" active-class="active" tag="li"><a style="color: black">Gallery</a></router-link>
+            <router-link  to="/Member" active-class="active" tag="li"><a style="color: black">Board Member's</a></router-link>
+            <li class="dropdown" :class="{open: isDropdownOpen}" @click="isDropdownOpen !=false">
+
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black">News &amp; Events <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <router-link to="/Attention" active-class="active" tag="li"><a style="color: black">Attention</a></router-link>
+                <router-link to="/Home/Calender" active-class="active" tag="li"><a>Calender</a></router-link>
+              </ul>
+            </li>
+
+            <li class="dropdown" :class="{open: isDropdownOpen}" @click="isDropdownOpen !=false">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black">Doc's &amp; Forms<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <router-link to="/Map" active-class="active" tag="li"><a style="color: black">Maps</a></router-link>
+                <router-link to="/Home/Classifies" active-class="active" tag="li"><a>Classified</a></router-link>
+                <router-link to="/Home/Resources" active-class="active" tag="li"><a>Covenants/By-Laws/Rules</a></router-link>
+              </ul>
+            </li>
+
+
+
+
           </ul>
         </div>
       </div>
     </nav>
     <div class="row">
-      <div class="image  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="banner  col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="hero">
           <div class="hero-text">
             <h1>SunRidge Property Owners Association</h1>
           </div>
         </div>
-      </div>
     </div>
-    <span class="date text-center"><h4>Today's Date: {{moment(date).format('MM/DD/YYYY')}}</h4></span>
+    </div>
+
   </div>
 
 </template>
 
-
+<script>
+  export default{
+    data() {
+      return{
+        isDropdownOpen: false
+      }
+    }
+  }
+</script>
 
 <style>
 
@@ -45,10 +72,15 @@
   }
 
 
-  .image {
+  .banner {
 
-    background:  url('https://source.unsplash.com/ADkSHwhLuU0/1500x500');
+    background-image:  url('../assets/banner2.jpg');
     background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    margin: 0; padding: 0; box-sizing: border-box;
+    width: 100%;
+    height: 550px;
   }
 
   .hero {
@@ -57,16 +89,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 400px;
     font-family: Tahoma, Geneva, sans-serif;
+    margin-top: 145px;
+
+  }
+  .hero .banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #2196F3;
+    z-index: -1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-  .image{
-   opacity: 1;
-    display: block;
+  .hero .banner:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
+    height: 100%;
+    background-color: #414a4f;
+    opacity: 0.75;
   }
+
+
 </style>
